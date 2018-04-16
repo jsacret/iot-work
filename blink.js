@@ -3,9 +3,9 @@ var MIC = new Gpio(4, 'in', 'both');
 var awsIot = require('aws-iot-device-sdk');
 
 var device = awsIot.device({
-	keyPath: './private.pem.key',
-	certPath: './certificate.pem.crt',
-	caPath: './ca.pem',
+	keyPath: './certs/private.pem.key',
+	certPath: './certs/certificate.pem.crt',
+	caPath: './certs/ca.pem',
 	clientId: 'arn:aws:iot:us-east-1:177496848564:thing/Gun_Shot_Detector_1',
 	host: 'a3grlfwcdcdc2g.iot.us-east-1.amazonaws.com'
 });
